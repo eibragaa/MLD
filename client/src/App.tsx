@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react'
-import { FaYoutube, FaInstagram, FaTiktok, FaFacebookF, FaDownload, FaMusic, FaVideo, FaClock, FaUser, FaLinkedin, FaTwitter, FaMoon, FaSun, FaHistory, FaGlobe } from 'react-icons/fa'
-import { Download, Play, Clock, User, Eye, Languages } from 'lucide-react'
+import { FaYoutube, FaInstagram, FaTiktok, FaFacebookF, FaDownload, FaMusic, FaVideo, FaClock, FaUser, FaLinkedin, FaTwitter, FaMoon, FaSun, FaHistory, FaLanguage, FaPlay, FaEye } from 'react-icons/fa'
 
 import { Button } from './components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './components/ui/card'
@@ -74,7 +73,7 @@ const LanguageToggle: React.FC = () => {
       onClick={() => setLanguage(language === 'en' ? 'pt' : 'en')}
       className="h-9 px-3"
     >
-      <Languages className="h-4 w-4 mr-2" />
+      <FaLanguage className="h-4 w-4 mr-2" />
       {language.toUpperCase()}
     </Button>
   )
@@ -412,7 +411,7 @@ const AppContent: React.FC = () => {
                     </>
                   ) : (
                     <>
-                      <Play className="h-4 w-4 mr-2" />
+                      <FaPlay className="h-4 w-4 mr-2" />
                       {t('getInfo')}
                     </>
                   )}
@@ -493,16 +492,16 @@ const AppContent: React.FC = () => {
                       {videoInfo.platform}
                     </Badge>
                     <Badge variant="outline" className="gap-1">
-                      <User className="h-3 w-3" />
+                      <FaUser className="h-3 w-3" />
                       {videoInfo.uploader}
                     </Badge>
                     <Badge variant="outline" className="gap-1">
-                      <Clock className="h-3 w-3" />
+                      <FaClock className="h-3 w-3" />
                       {formatDuration(videoInfo.duration)}
                     </Badge>
                     {videoInfo.view_count && (
                       <Badge variant="outline" className="gap-1">
-                        <Eye className="h-3 w-3" />
+                        <FaEye className="h-3 w-3" />
                         {formatViewCount(videoInfo.view_count)} {t('views')}
                       </Badge>
                     )}
@@ -538,7 +537,7 @@ const AppContent: React.FC = () => {
                           </>
                         ) : (
                           <>
-                            <Download className="h-4 w-4 mr-2" />
+                            <FaDownload className="h-4 w-4 mr-2" />
                             {t('downloadMp3')}
                           </>
                         )}
@@ -583,7 +582,7 @@ const AppContent: React.FC = () => {
                               </>
                             ) : (
                               <>
-                                <Download className="h-4 w-4 mr-2" />
+                                <FaDownload className="h-4 w-4 mr-2" />
                                 {t('download')}
                               </>
                             )}
@@ -668,7 +667,7 @@ const AppContent: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="text-center space-y-2 p-4 rounded-lg bg-muted/50">
                 <div className="w-12 h-12 mx-auto bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
-                  <Download className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                  <FaDownload className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                 </div>
                 <h3 className="font-semibold">{t('fastDownloads')}</h3>
                 <p className="text-sm text-muted-foreground">{t('fastDescription')}</p>
