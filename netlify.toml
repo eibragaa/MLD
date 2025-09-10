@@ -13,6 +13,7 @@
   NODE_OPTIONS = "--openssl-legacy-provider"
   GENERATE_SOURCEMAP = "false"
   SKIP_PREFLIGHT_CHECK = "true"
+  CI = "false"
 
 # Redirect all requests to index.html for SPA
 [[redirects]]
