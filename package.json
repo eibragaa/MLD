@@ -1,0 +1,33 @@
+{
+  "name": "mediadownloader-clone",
+  "version": "1.0.0",
+  "description": "A simple, fast, and reliable media downloader for social media platforms",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "cd server && npm run dev",
+    "client:dev": "cd client && set NODE_OPTIONS=--openssl-legacy-provider && npm start",
+    "build": "cd client && npm run build",
+    "build:all": "npm run install:all && npm run build",
+    "start": "cd server && npm start",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "test": "cd client && npm test",
+    "deploy:netlify": "npm run build:all && netlify deploy --prod --dir=client/build"
+  },
+  "keywords": [
+    "media",
+    "downloader",
+    "youtube",
+    "instagram",
+    "tiktok",
+    "facebook",
+    "linkedin",
+    "twitter",
+    "x"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
