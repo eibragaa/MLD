@@ -286,7 +286,7 @@ REACT_APP_API_BASE_URL=https://your-domain.netlify.app/.netlify/functions
 
 2. **Add remote repository:**
    ```bash
-   git remote add origin https://github.com/your-username/mediadownloader.git
+   git remote add origin https://github.com/eibragaa/MLD.git
    git branch -M main
    git push -u origin main
    ```

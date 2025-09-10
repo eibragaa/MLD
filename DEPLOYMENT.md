@@ -14,15 +14,16 @@
 
 ### 1. Create GitHub Repository
 ```bash
-# Go to GitHub.com and create a new repository named 'mediadownloader'
+# Go to GitHub.com and create a new repository named 'MLD'
+# Repository URL: https://github.com/eibragaa/MLD.git
 # Or use GitHub CLI:
-gh repo create mediadownloader --public --description "Modern media downloader supporting YouTube, Instagram, TikTok, Facebook, LinkedIn, and X"
+gh repo create MLD --public --description "Modern media downloader supporting YouTube, Instagram, TikTok, Facebook, LinkedIn, and X"
 ```
 
 ### 2. Push to GitHub
 ```bash
-# Add remote origin (replace with your GitHub username)
-git remote add origin https://github.com/YOUR_USERNAME/mediadownloader.git
+# Add remote origin
+git remote add origin https://github.com/eibragaa/MLD.git
 
 # Rename branch to main (if needed)
 git branch -M main
