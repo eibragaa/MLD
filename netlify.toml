@@ -6,7 +6,7 @@
   publish = "client/build"
   
   # Command to run to build the site
-  command = "npm run build:all"
+  command = "npm run build:prod"
 
 [build.environment]
   NODE_VERSION = "18"

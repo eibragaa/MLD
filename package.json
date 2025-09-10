@@ -8,12 +8,12 @@
     "server:dev": "cd server && npm run dev",
     "client:dev": "cd client && npm start",
     "build": "cd client && npm run build",
-    "build:all": "npm run install:clean && npm run build",
+    "build:prod": "cd client && GENERATE_SOURCEMAP=false npm run build",
     "start": "cd server && npm start",
-    "install:all": "npm install --production && cd client && npm install && cd ../server && npm install",
-    "install:clean": "cd client && npm ci && cd ../server && npm ci",
+    "install:all": "cd client && npm install && cd ../server && npm install",
+    "clean": "cd client && rm -rf build node_modules && cd ../server && rm -rf node_modules",
     "test": "cd client && npm test",
-    "deploy:netlify": "npm run build:all && netlify deploy --prod --dir=client/build"
+    "analyze": "cd client && npm run build && npx source-map-explorer 'build/static/js/*.js'"
   },
   "keywords": [
     "media",
@@ -26,9 +26,13 @@
     "twitter",
     "x"
   ],
-  "author": "Your Name",
+  "author": "eibragaa",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   }
 }
